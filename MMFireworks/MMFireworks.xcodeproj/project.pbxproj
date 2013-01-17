@@ -20,7 +20,6 @@
 		A3581E97169F83FA005A1180 /* MMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3581E95169F83FA005A1180 /* MMViewController.xib */; };
 		A3581EA2169F865A005A1180 /* tspark.png in Resources */ = {isa = PBXBuildFile; fileRef = A3581EA1169F865A005A1180 /* tspark.png */; };
 		A3581EA4169F86D7005A1180 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3581EA3169F86D7005A1180 /* QuartzCore.framework */; };
-		A393FC1416A08FD500153551 /* MMMortorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A393FC1016A08F1D00153551 /* MMMortorLayer.m */; };
 		A393FC1516A08FD700153551 /* MMFireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = A393FC1216A08F1E00153551 /* MMFireworksView.m */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +42,6 @@
 		A3581E96169F83FA005A1180 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MMViewController.xib; sourceTree = "<group>"; };
 		A3581EA1169F865A005A1180 /* tspark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tspark.png; sourceTree = "<group>"; };
 		A3581EA3169F86D7005A1180 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		A393FC0F16A08F1D00153551 /* MMMortorLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMMortorLayer.h; sourceTree = "<group>"; };
-		A393FC1016A08F1D00153551 /* MMMortorLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMMortorLayer.m; sourceTree = "<group>"; };
 		A393FC1116A08F1D00153551 /* MMFireworksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMFireworksView.h; sourceTree = "<group>"; };
 		A393FC1216A08F1E00153551 /* MMFireworksView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMFireworksView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,8 +97,6 @@
 				A3581E92169F83FA005A1180 /* MMViewController.h */,
 				A3581E93169F83FA005A1180 /* MMViewController.m */,
 				A3581E95169F83FA005A1180 /* MMViewController.xib */,
-				A393FC0F16A08F1D00153551 /* MMMortorLayer.h */,
-				A393FC1016A08F1D00153551 /* MMMortorLayer.m */,
 				A393FC1116A08F1D00153551 /* MMFireworksView.h */,
 				A393FC1216A08F1E00153551 /* MMFireworksView.m */,
 				A3581EA1169F865A005A1180 /* tspark.png */,
@@ -195,7 +190,6 @@
 				A3581E87169F83FA005A1180 /* main.m in Sources */,
 				A3581E8B169F83FA005A1180 /* MMAppDelegate.m in Sources */,
 				A3581E94169F83FA005A1180 /* MMViewController.m in Sources */,
-				A393FC1416A08FD500153551 /* MMMortorLayer.m in Sources */,
 				A393FC1516A08FD700153551 /* MMFireworksView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

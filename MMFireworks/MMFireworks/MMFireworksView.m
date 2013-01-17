@@ -19,12 +19,12 @@
 // Changing this value will alter the speed of the rocket launch.
 // Higher values will have a faster speed. The rocket will also travel further.
 // Recommended values 0-500
-#define kRocketLaunchVelocity 200.0f
+#define kRocketLaunchVelocity 150.0f
 
 // This value defines the amount of potential variation of the velocity of each rocket.
 // Higher values will increase the amount of variation each rocket travels.
 // Recommended values 0-500
-#define kRocketLaunchVelocityRange 100.0f
+#define kRocketLaunchVelocityRange 150.0f
 
 // Changing this value will alter the size of the explosion.
 // Higher values will have a larger explosion.
@@ -45,14 +45,13 @@
 
 @implementation MMFireworksView
 
-//+ (Class)layerClass {
-//  return [MMMortorLayer class];
-//}
-
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
+    self.backgroundColor = [UIColor clearColor];
+    
     self.mortor = [CAEmitterLayer layer];
+    self.mortor.backgroundColor = [UIColor clearColor].CGColor;
     [self.layer addSublayer:self.mortor];
     
     [self setUpFireworks];
@@ -76,9 +75,9 @@
 }
 
 - (void)launchThisManyFireworks:(NSInteger)numberOfFireworks {
-  self.mortor.birthRate = 1;
-  self.rocket.birthRate = numberOfFireworks;
-  int64_t delayInSeconds = kDurationOfRocketLaunch;
+  self.mortor.birthRate = numberOfFireworks;
+  [self setNeedsDisplay];
+  int64_t delayInSeconds = kDurationOfRocketLaunch + 2;
   dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
   dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
     self.mortor.birthRate = 0;
@@ -88,7 +87,6 @@
 - (void)setUpFireworks {
   self.mortor.birthRate = 0;
   
-  self.mortor.backgroundColor = [UIColor blackColor].CGColor;
   self.mortor.anchorPoint = CGPointMake(0, 0);
   
   UIImage *image = [UIImage imageNamed:@"tspark.png"];
@@ -102,8 +100,8 @@
 	self.rocket = [CAEmitterCell emitterCell];
 	self.rocket.emissionLongitude = (3 * M_PI) / 2;
 	self.rocket.emissionLatitude = 0;
+  self.rocket.birthRate = 1;
 	self.rocket.lifetime = kDurationOfRocketLaunch;
-	self.rocket.birthRate = 1;
 	self.rocket.velocity = kRocketLaunchVelocity;
 	self.rocket.velocityRange = kRocketLaunchVelocityRange;
 	self.rocket.yAcceleration = -250;
